@@ -8,7 +8,7 @@ function App() {
   return (
     <div className="flex bg-fx-dark-blue h-[100vh]">
       <LeftMenu />
-      <div className="flex flex-col bg-fx-white w-full">
+      <div className="flex flex-col  w-full">
         <Header />
         <div className="flex bg-fx-gray h-[100vh] p-4 ">
           <MainContainer />

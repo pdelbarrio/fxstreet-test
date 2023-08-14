@@ -3,7 +3,7 @@ function LeftMenu() {
     <aside className="w-1/5 hidden md:block p-10">
       <img
         src="/src/assets/logo_desktop.png"
-        alt=""
+        alt="logodesktop"
         className="mx-auto mb-20 h-10 w-auto"
       />
       <div className="mt-5">

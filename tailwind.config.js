@@ -6,6 +6,8 @@ export default {
       "fx-dark-blue": "#242D38",
       "fx-orange": "#E4871B",
       "fx-gray": "#ECECF1",
+      "fx-gray-dot": "#DDDEDF",
+      "fx-gray-dark": "#8C8D91",
       "fx-white": "#FFFFFF",
       "fx-blue-clear": "#304C70",
     },
