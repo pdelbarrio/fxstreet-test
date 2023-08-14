@@ -4,27 +4,19 @@ function RightColumn() {
       <div className="flex flex-col">
         <div className="bg-fx-blue-clear pt-10 pb-20 pl-10 pr-10 rounded-lg">
           <div className="mb-4">
-            <span className="bg-fx-white text-fx-white">
-              _____________________________________________
-            </span>
+            <div className="mb-2 h-2 w-4/5 bg-fx-white"></div>
           </div>
           <div className="mt-4">
-            <span className="bg-fx-white text-fx-white">
-              _____________________
-            </span>
+            <div className="mb-2 h-2 w-2/4 bg-fx-white"></div>
           </div>
         </div>
 
         <div className="border border-fx-blue-clear rounded-lg mt-5 p-10">
           <div className="flex justify-center">
-            <div className="mt-1 mr-3">
-              <span className="bg-fx-blue-clear text-fx-blue-clear">
-                ________________________
-              </span>
-            </div>
+            <div className="mb-2 h-2 w-1/3 bg-fx-blue-clear mt-1 mr-3"></div>
 
-            <div className="mb-4">
-              <div className="w-8 h-8 rounded-full bg-fx-blue-clear"></div>
+            <div className="">
+              <div className="w-4 h-4 rounded-full bg-fx-blue-clear"></div>
             </div>
           </div>
         </div>
