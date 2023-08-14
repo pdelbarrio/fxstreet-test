@@ -1,12 +1,10 @@
+import logoMobile from "../assets/logo_mobile.png";
+
 function Header() {
   return (
     <header className="p-4 bg-fx-dark-blue md:bg-fx-white">
       <div className="flex justify-between md:hidden">
-        <img
-          src="/src/assets/logo_mobile.png"
-          alt="logomobile"
-          className="h-8 w-auto"
-        />
+        <img src={logoMobile} alt="logomobile" className="h-8 w-auto" />
         <div className="flex mt-2">
           <div className="w-5 h-5 rounded-full bg-fx-gray-dot mr-5"></div>
           <div className="w-5 h-5 rounded-full bg-fx-gray-dot"></div>

@@ -1,8 +1,10 @@
+import logoDesktop from "../assets/logo_desktop.png";
+
 function LeftMenu() {
   return (
     <aside className="w-1/5 hidden md:block p-10">
       <img
-        src="/src/assets/logo_desktop.png"
+        src={logoDesktop}
         alt="logodesktop"
         className="mx-auto mb-20 h-10 w-auto"
       />
