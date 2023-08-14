@@ -1,0 +1,2 @@
+# FXStreet: Ejercicio frontend
+
