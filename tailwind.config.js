@@ -7,6 +7,7 @@ export default {
       "fx-orange": "#E4871B",
       "fx-gray": "#ECECF1",
       "fx-white": "#FFFFFF",
+      "fx-blue-clear": "#304C70",
     },
     extend: {
       fontFamily: {
