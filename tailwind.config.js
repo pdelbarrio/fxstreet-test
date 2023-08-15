@@ -10,6 +10,7 @@ export default {
       "fx-gray-dark": "#8C8D91",
       "fx-white": "#FFFFFF",
       "fx-blue-clear": "#304C70",
+      "fx-blue-light": "#7598C4",
     },
     extend: {
       fontFamily: {

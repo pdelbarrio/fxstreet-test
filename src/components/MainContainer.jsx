@@ -1,5 +1,6 @@
 import { useState, useEffect } from "react";
 import { AllButton, LatestButton, PopularButton } from "./Buttons";
+import Post from "./Post";
 
 function MainContainer() {
   const [isLatestClicked, setIsLatestClicked] = useState(true);
@@ -21,6 +22,15 @@ function MainContainer() {
     }
     fetchPosts();
   }, []);
+
+  const filteredPosts = posts.filter((post) => {
+    if (isPopularClicked) {
+      return post.isPopular === true;
+    } else if (isLatestClicked) {
+      return post.isPopular === false;
+    }
+    return true;
+  });
 
   return (
     <main className="p-4 flex-grow flex flex-col justify-start">
@@ -49,9 +59,7 @@ function MainContainer() {
         </div>
       </div>
       <div className="py-4">
-        {posts.map((post) => (
-          <p key={post.id}>{post.title}</p>
-        ))}
+        <Post posts={filteredPosts} />
       </div>
     </main>
   );
