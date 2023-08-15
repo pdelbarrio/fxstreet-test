@@ -1,6 +1,7 @@
 import { useState, useEffect } from "react";
 import { AllButton, LatestButton, PopularButton } from "./Buttons";
 import Post from "./Post";
+import { FilterIcon } from "./Icons";
 
 function MainContainer() {
   const [isLatestClicked, setIsLatestClicked] = useState(true);
@@ -53,9 +54,14 @@ function MainContainer() {
             <PopularButton isClicked={isPopularClicked} />
           </div>
         </div>
-        <div className="flex space-x-4">
-          <div>Show:</div>
-          <AllButton />
+        <div className="hidden md:block space-x-4">
+          <div className="flex">
+            <div>Show:</div>
+            <AllButton />
+          </div>
+        </div>
+        <div className="md:hidden">
+          <FilterIcon />
         </div>
       </div>
       <div className="py-4">
