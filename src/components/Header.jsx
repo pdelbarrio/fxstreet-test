@@ -11,12 +11,12 @@ function Header() {
         </div>
       </div>
       <div className="hidden md:block">
-        <div className="">
-          <div className="flex">
+        <div className="flex">
+          <div className="flex-auto flex">
             <div className="w-4 h-4 rounded-full bg-fx-blue-clear mr-3"></div>
-            <div className="mb-2 h-2 w-1/6 bg-fx-blue-clear mt-1 mr-3"></div>
+            <div className="mb-2 h-2 w-2/6 bg-fx-blue-clear mt-1 mr-3"></div>
           </div>
-          <div className="flex">
+          <div className="flex-auto flex justify-evenly">
             <div className="mb-2 h-2 w-1/6 bg-fx-orange mt-1"></div>
             <div className="w-4 h-4 rounded-full bg-fx-gray-dark"></div>
             <div className="w-4 h-4 rounded-full bg-fx-gray-dark"></div>

@@ -11,13 +11,11 @@ function RightColumn() {
           </div>
         </div>
 
-        <div className="border border-fx-blue-clear rounded-lg mt-5 p-10">
+        <div className="border border-fx-blue-clear rounded-lg mt-5 p-5">
           <div className="flex justify-center">
             <div className="mb-2 h-2 w-1/3 bg-fx-blue-clear mt-1 mr-3"></div>
 
-            <div className="">
-              <div className="w-4 h-4 rounded-full bg-fx-blue-clear"></div>
-            </div>
+            <div className="w-4 h-4 rounded-full bg-fx-blue-clear"></div>
           </div>
         </div>
       </div>
