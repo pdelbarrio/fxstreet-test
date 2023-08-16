@@ -78,7 +78,7 @@ export default function Post({ posts }) {
             </div>
           </div>
           {/* Header post desktop */}
-          <div className="p-6 border border-t-0 border-l-0 border-r-0 border-b-1 border-fx-gray md:block">
+          <div className="hidden md:block p-6 border border-t-0 border-l-0 border-r-0 border-b-1 border-fx-gray">
             <div className="flex">
               <img
                 src={post.author.imageUrl}
