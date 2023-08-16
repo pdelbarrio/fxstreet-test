@@ -2,9 +2,24 @@ import { FontAwesomeIcon } from "@fortawesome/react-fontawesome";
 import { formatPublicationTime } from "../utils/utils";
 import { ClockIcon, FileSearchIcon } from "./Icons";
 import { faCaretRight } from "@fortawesome/free-solid-svg-icons";
+import parse, { domToReact } from "html-react-parser";
 
 /* eslint-disable react/prop-types */
 export default function Post({ posts }) {
+  const CustomLink = ({ children, ...props }) => (
+    <a className="font-bold text-fx-orange" {...props}>
+      {children}
+    </a>
+  );
+  const replaceFunction = (domNode) => {
+    if (domNode.name === "a") {
+      return (
+        <CustomLink {...domNode.attribs}>
+          {domToReact(domNode.children)}
+        </CustomLink>
+      );
+    }
+  };
   return (
     <div>
       {posts.map((post) => (
@@ -48,8 +63,8 @@ export default function Post({ posts }) {
             <p>{post.title}</p>
           </div>
           <div>
-            <div>{post.content}</div>
-            <img src={post.imageUrl} alt={post.title} />
+            <div>{parse(post.content, { replace: replaceFunction })}</div>
+            {post.imageUrl && <img src={post.imageUrl} alt={post.title} />}
           </div>
           <div>
             <div>Like</div>
