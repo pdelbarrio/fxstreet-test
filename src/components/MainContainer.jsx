@@ -33,7 +33,7 @@ function MainContainer() {
   });
 
   return (
-    <main className="p-4 flex-grow flex flex-col min-h-screen justify-start">
+    <main className="p-2 flex-grow flex flex-col min-h-screen justify-start mr-2">
       <div className="flex justify-between">
         <div className="flex space-x-4">
           <div

@@ -10,7 +10,7 @@ function App() {
       <LeftMenu />
       <div className="flex flex-col w-full h-full">
         <Header />
-        <div className="flex bg-fx-gray h-full p-4">
+        <div className="flex bg-fx-gray h-full p-2">
           <MainContainer />
           <RightColumn />
         </div>

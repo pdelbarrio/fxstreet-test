@@ -5,7 +5,13 @@
 .fixed-width-div {
   width: 80px;
 }
-/*
+
+@media (max-width: 768px) {
+  .fixed-width-div {
+    width: 70px;
+  }
+}
+
 html {
   box-sizing: border-box;
   font-size: 16px;
@@ -33,10 +39,7 @@ ul {
   font-weight: normal;
 }
 
-
-
 img {
   max-width: 100%;
   height: auto;
 }
-*/
