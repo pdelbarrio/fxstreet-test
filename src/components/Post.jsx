@@ -11,6 +11,7 @@ export default function Post({ posts }) {
       {children}
     </a>
   );
+
   const replaceFunction = (domNode) => {
     if (domNode.name === "a") {
       return (
@@ -54,15 +55,30 @@ export default function Post({ posts }) {
               </p>
             </div>
           </div>
-          <div>
-            <p>{post.author.name}</p>
-            <p>{post.author.companyName}</p>
+          {/* Header post mobile */}
+          <div className="p-4 border border-t-0 border-l-0 border-r-0 border-b-1 border-fx-gray md:hidden">
+            <div className="flex">
+              <p className="font-semibold text-fx-gray-post mr-3">
+                {post.author.name}
+              </p>
+              <p className="font-semibold text-fx-gray-post">|</p>
+              <p className="font-semibold text-fx-gray-post ml-3">
+                {post.author.companyName}
+              </p>
+            </div>
+            <div className="flex mt-2">
+              <img
+                src={post.author.imageUrl}
+                alt=""
+                className="w-[35px] h-auto rounded-full mr-2"
+              />
+              <p className="ml-2 font-semibold leading-5 text-lg text-fx-text-post">
+                {post.title}
+              </p>
+            </div>
           </div>
-          <div>
-            <img src={post.author.imageUrl} alt="" />
-            <p>{post.title}</p>
-          </div>
-          <div>
+          {/* Header post desktop */}
+          <div className="p-4">
             <div>{parse(post.content, { replace: replaceFunction })}</div>
             {post.imageUrl && <img src={post.imageUrl} alt={post.title} />}
           </div>

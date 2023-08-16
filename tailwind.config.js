@@ -8,6 +8,8 @@ export default {
       "fx-gray": "#ECECF1",
       "fx-gray-dot": "#DDDEDF",
       "fx-gray-dark": "#8C8D91",
+      "fx-gray-post": "#A3A3A8",
+      "fx-text-post": "#49494F",
       "fx-white": "#FFFFFF",
       "fx-blue-clear": "#304C70",
       "fx-blue-light": "#7598C4",
