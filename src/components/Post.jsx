@@ -40,15 +40,15 @@ export default function Post({ posts }) {
   };
 
   return (
-    <div>
+    <div className="">
       {posts.map((post, index) => (
         <div
           key={post.id}
-          className="bg-fx-white border rounded-md border-fx-gray-dot mb-4"
+          className="bg-fx-white rounded-lg border-fx-gray-dot border-2 mb-4"
         >
-          <div className="flex justify-between bg-fx-gray p-2">
+          <div className="flex justify-between bg-fx-gray p-4">
             <div className="flex flex-col md:flex-row">
-              <div className="flex">
+              <div className="flex md:ml-3">
                 <FileSearchIcon />
                 <p className="font-bold antialiased text-fx-blue-clear text-sm md:text-base">
                   {post.feed}
@@ -87,7 +87,7 @@ export default function Post({ posts }) {
             <div className="flex mt-2">
               <img
                 src={post.author.imageUrl}
-                alt=""
+                alt={post.author.name}
                 className="w-[35px] h-[35px] rounded-full mr-2"
               />
               <p className="ml-2 font-semibold leading-5 text-lg text-fx-text-post">
@@ -100,7 +100,7 @@ export default function Post({ posts }) {
             <div className="flex">
               <img
                 src={post.author.imageUrl}
-                alt=""
+                alt={post.author.name}
                 className="w-[50px] h-[50px] rounded-full mr-5"
               />
 
@@ -124,7 +124,9 @@ export default function Post({ posts }) {
           </div>
           <div className="p-4">
             <div>{parse(post.content, { replace: replaceFunction })}</div>
-            {post.imageUrl && <img src={post.imageUrl} alt={post.title} />}
+            {post.imageUrl && (
+              <img src={post.imageUrl} className="mt-4" alt={post.title} />
+            )}
           </div>
           <div className="flex p-5">
             <div

@@ -1,6 +1,6 @@
 function RightColumn() {
   return (
-    <aside className="w-[33vw] hidden md:block">
+    <aside className="min-w-[30vw] hidden md:block">
       <div className="flex flex-col">
         <div className="bg-fx-blue-clear pt-10 pb-20 pl-10 pr-10 rounded-lg">
           <div className="mb-4">

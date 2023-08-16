@@ -33,11 +33,11 @@ function MainContainer() {
   });
 
   return (
-    <main className="p-4 flex-grow flex flex-col justify-start">
+    <main className="p-4 flex-grow flex flex-col min-h-screen justify-start">
       <div className="flex justify-between">
         <div className="flex space-x-4">
           <div
-            className="hover:cursor-pointer"
+            className="ml-2 mr-8 hover:cursor-pointer"
             onClick={() => {
               setIsLatestClicked(true), setIsPopularClicked(false);
             }}
@@ -54,7 +54,7 @@ function MainContainer() {
           </div>
         </div>
         <div className="hidden md:block space-x-4">
-          <div className="flex">
+          <div className="flex mr-2">
             <div>Show:</div>
             <AllButton />
           </div>

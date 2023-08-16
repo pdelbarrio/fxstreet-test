@@ -6,11 +6,11 @@ import RightColumn from "./components/RightColumn";
 
 function App() {
   return (
-    <div className="flex bg-fx-dark-blue h-[100vh]">
+    <div className="flex h-full">
       <LeftMenu />
-      <div className="flex flex-col  w-full">
+      <div className="flex flex-col w-full h-full">
         <Header />
-        <div className="flex bg-fx-gray h-[100vh] p-4 ">
+        <div className="flex bg-fx-gray h-full p-4">
           <MainContainer />
           <RightColumn />
         </div>
