@@ -6,7 +6,7 @@ function LeftMenu() {
       <img
         src={logoDesktop}
         alt="logodesktop"
-        className="mx-auto mb-20 h-10 w-auto"
+        className="mx-auto mb-20 h-[54px] w-auto"
       />
       <div className="mt-5">
         <div className="mb-8 h-2 w-4/5 bg-fx-white"></div>

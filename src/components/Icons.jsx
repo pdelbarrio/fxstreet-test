@@ -79,3 +79,131 @@ export const ClockIcon = () => {
     </svg>
   );
 };
+
+export const EmptyHeart = () => {
+  const iconDefault = "#49494F";
+  return (
+    <svg
+      xmlns="http://www.w3.org/2000/svg"
+      version="1.1"
+      width="16"
+      height="16"
+      viewBox="0 0 256 256"
+      className="mt-1"
+      fill={iconDefault}
+    >
+      <defs></defs>
+      <g transform="translate(1.4065934065934016 1.4065934065934016) scale(2.81 2.81)">
+        <path
+          d="M 64.44 12.016 c 5.225 0 10.136 2.035 13.831 5.729 c 7.626 7.626 7.626 20.035 0 27.662 l -19.44 19.44 L 45 78.677 L 31.169 64.846 l -19.44 -19.44 c -7.626 -7.626 -7.626 -20.035 0 -27.662 c 3.694 -3.694 8.606 -5.729 13.831 -5.729 c 5.225 0 10.136 2.035 13.831 5.729 l 1.367 1.367 L 45 23.354 l 4.242 -4.242 l 1.367 -1.367 C 54.304 14.05 59.216 12.016 64.44 12.016 M 64.44 6.016 c -6.541 0 -13.083 2.495 -18.073 7.486 L 45 14.869 l 0 0 l 0 0 l -1.367 -1.367 C 38.642 8.511 32.101 6.016 25.56 6.016 S 12.477 8.511 7.486 13.502 c -9.982 9.982 -9.982 26.165 0 36.147 l 19.44 19.44 c 0 0 0 0 0.001 0 L 45 87.163 l 18.073 -18.073 c 0 0 0 0 0 0 l 19.44 -19.44 c 9.982 -9.982 9.982 -26.165 0 -36.147 C 77.523 8.511 70.982 6.016 64.44 6.016 L 64.44 6.016 z"
+          transform=" matrix(1 0 0 1 0 0) "
+          strokeLinecap="round"
+        />
+      </g>
+    </svg>
+  );
+};
+export const FullHeart = () => {
+  const likedRed = "#D25746";
+  return (
+    <svg
+      xmlns="http://www.w3.org/2000/svg"
+      version="1.1"
+      width="16"
+      height="16"
+      viewBox="0 0 256 256"
+      className="mt-1"
+      fill={likedRed}
+    >
+      <defs></defs>
+      <g transform="translate(1.4065934065934016 1.4065934065934016) scale(2.81 2.81)">
+        <path
+          d="M 83.627 13.423 L 83.627 13.423 c -8.498 -8.498 -22.403 -8.498 -30.901 0 L 45 21.148 l -7.725 -7.725 c -8.498 -8.498 -22.403 -8.498 -30.901 0 s -8.498 22.403 0 30.901 l 13.247 13.247 c 0 0 0 0 0 0 L 45 82.951 l 25.379 -25.379 l 13.248 -13.248 C 92.124 35.826 92.124 21.921 83.627 13.423 z"
+          transform=" matrix(1 0 0 1 0 0) "
+          strokeLinecap="round"
+        />
+      </g>
+    </svg>
+  );
+};
+
+export const EmptyBookmark = () => {
+  const iconDefault = "#49494F";
+  return (
+    <svg
+      xmlns="http://www.w3.org/2000/svg"
+      version="1.1"
+      width="16"
+      height="16"
+      viewBox="0 0 256 256"
+      className="mt-1"
+      fill={iconDefault}
+    >
+      <defs></defs>
+      <g transform="translate(1.4065934065934016 1.4065934065934016) scale(2.81 2.81)">
+        <path
+          d="M 73.437 90 c -0.642 0 -1.279 -0.206 -1.811 -0.608 L 45 69.234 L 18.375 89.392 c -0.909 0.688 -2.127 0.801 -3.146 0.295 c -1.02 -0.507 -1.665 -1.548 -1.665 -2.687 V 3 c 0 -1.657 1.343 -3 3 -3 h 56.873 c 1.657 0 3 1.343 3 3 v 84 c 0 1.139 -0.645 2.18 -1.664 2.687 C 74.35 89.896 73.892 90 73.437 90 z M 45 62.472 c 0.638 0 1.275 0.203 1.811 0.608 l 23.626 17.886 V 6 H 19.563 v 74.966 L 43.189 63.08 C 43.725 62.675 44.362 62.472 45 62.472 z"
+          transform=" matrix(1 0 0 1 0 0) "
+          strokeLinecap="round"
+        />
+      </g>
+    </svg>
+  );
+};
+export const FullBookmark = () => {
+  const savedGreen = "#338473";
+  return (
+    <svg
+      xmlns="http://www.w3.org/2000/svg"
+      version="1.1"
+      width="16"
+      height="16"
+      viewBox="0 0 256 256"
+      className="mt-1"
+      fill={savedGreen}
+    >
+      <defs></defs>
+      <g transform="translate(1.4065934065934016 1.4065934065934016) scale(2.81 2.81)">
+        <path
+          d="M 74.113 0 H 15.886 c -1.105 0 -2 0.895 -2 2 v 86 c 0 0.759 0.43 1.453 1.109 1.791 c 0.282 0.14 0.587 0.209 0.89 0.209 c 0.428 0 0.854 -0.138 1.208 -0.405 l 25.669 -19.432 c 1.324 -1.002 3.152 -1.002 4.476 0 l 25.668 19.432 c 0.606 0.458 1.418 0.533 2.098 0.196 c 0.68 -0.338 1.109 -1.032 1.109 -1.791 V 2 C 76.113 0.895 75.218 0 74.113 0 z"
+          transform=" matrix(1 0 0 1 0 0) "
+          strokeLinecap="round"
+        />
+      </g>
+    </svg>
+  );
+};
+
+export const MoreIcon = () => {
+  const moreIconColor = "#8C8D91";
+  return (
+    <svg
+      xmlns="http://www.w3.org/2000/svg"
+      version="1.1"
+      width="21"
+      height="21"
+      viewBox="0 0 256 256"
+      className=""
+      fill={moreIconColor}
+    >
+      <defs></defs>
+      <g transform="translate(1.4065934065934016 1.4065934065934016) scale(2.81 2.81)">
+        <path
+          d="M 45 56.551 c -6.369 0 -11.551 -5.182 -11.551 -11.551 S 38.631 33.449 45 33.449 S 56.551 38.631 56.551 45 S 51.369 56.551 45 56.551 z"
+          transform=" matrix(1 0 0 1 0 0) "
+          strokeLinecap="round"
+        />
+        <path
+          d="M 11.551 56.551 C 5.182 56.551 0 51.369 0 45 s 5.182 -11.551 11.551 -11.551 c 6.37 0 11.551 5.182 11.551 11.551 S 17.92 56.551 11.551 56.551 z"
+          transform=" matrix(1 0 0 1 0 0) "
+          strokeLinecap="round"
+        />
+        <path
+          d="M 78.449 56.551 c -6.369 0 -11.551 -5.182 -11.551 -11.551 s 5.182 -11.551 11.551 -11.551 S 90 38.631 90 45 S 84.818 56.551 78.449 56.551 z"
+          transform=" matrix(1 0 0 1 0 0) "
+          strokeLinecap="round"
+        />
+      </g>
+    </svg>
+  );
+};

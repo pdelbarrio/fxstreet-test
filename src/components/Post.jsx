@@ -3,9 +3,14 @@ import { formatPublicationTime } from "../utils/utils";
 import { ClockIcon, FileSearchIcon } from "./Icons";
 import { faCaretRight } from "@fortawesome/free-solid-svg-icons";
 import parse, { domToReact } from "html-react-parser";
+import { BookmarkButton, LikeButton, MoreButton } from "./Buttons";
+import { useState } from "react";
 
 /* eslint-disable react/prop-types */
 export default function Post({ posts }) {
+  const [isLiked, setIsLiked] = useState(false);
+  const [isSaved, setIsSaved] = useState(false);
+
   const CustomLink = ({ children, ...props }) => (
     <a className="font-bold text-fx-orange" {...props}>
       {children}
@@ -21,6 +26,15 @@ export default function Post({ posts }) {
       );
     }
   };
+
+  const handleLike = () => {
+    setIsLiked(!isLiked);
+  };
+
+  const handleSave = () => {
+    setIsSaved(!isSaved);
+  };
+
   return (
     <div>
       {posts.map((post) => (
@@ -108,10 +122,16 @@ export default function Post({ posts }) {
             <div>{parse(post.content, { replace: replaceFunction })}</div>
             {post.imageUrl && <img src={post.imageUrl} alt={post.title} />}
           </div>
-          <div>
-            <div>Like</div>
-            <div>Save</div>
-            <div>· · ·</div>
+          <div className="flex p-5">
+            <div className="hover:cursor-pointer mr-10" onClick={handleLike}>
+              <LikeButton isLiked={isLiked} />
+            </div>
+            <div className="hover:cursor-pointer mr-10" onClick={handleSave}>
+              <BookmarkButton isSaved={isSaved} />
+            </div>
+            <div>
+              <MoreButton />
+            </div>
           </div>
         </div>
       ))}

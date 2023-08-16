@@ -16,7 +16,6 @@ function MainContainer() {
         const response = await fetch(APIurl);
         const data = await response.json();
         setPosts(data);
-        console.log(data);
       } catch (error) {
         console.error("Error fetching data:", error);
       }
