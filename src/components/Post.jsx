@@ -70,7 +70,7 @@ export default function Post({ posts }) {
               <img
                 src={post.author.imageUrl}
                 alt=""
-                className="w-[35px] h-auto rounded-full mr-2"
+                className="w-[35px] h-[35px] rounded-full mr-2"
               />
               <p className="ml-2 font-semibold leading-5 text-lg text-fx-text-post">
                 {post.title}
