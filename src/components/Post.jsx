@@ -8,8 +8,8 @@ import { useState } from "react";
 
 /* eslint-disable react/prop-types */
 export default function Post({ posts }) {
-  const [isLiked, setIsLiked] = useState(false);
-  const [isSaved, setIsSaved] = useState(false);
+  const [likes, setLikes] = useState(posts.map(() => false));
+  const [saved, setSaved] = useState(posts.map(() => false));
 
   const CustomLink = ({ children, ...props }) => (
     <a className="font-bold text-fx-orange" {...props}>
@@ -27,17 +27,21 @@ export default function Post({ posts }) {
     }
   };
 
-  const handleLike = () => {
-    setIsLiked(!isLiked);
+  const handleLike = (postId) => {
+    const updatedLikes = [...likes];
+    updatedLikes[postId] = !updatedLikes[postId];
+    setLikes(updatedLikes);
   };
 
-  const handleSave = () => {
-    setIsSaved(!isSaved);
+  const handleSave = (postId) => {
+    const updatedSaved = [...saved];
+    updatedSaved[postId] = !updatedSaved[postId];
+    setSaved(updatedSaved);
   };
 
   return (
     <div>
-      {posts.map((post) => (
+      {posts.map((post, index) => (
         <div
           key={post.id}
           className="bg-fx-white border rounded-md border-fx-gray-dot mb-4"
@@ -123,11 +127,17 @@ export default function Post({ posts }) {
             {post.imageUrl && <img src={post.imageUrl} alt={post.title} />}
           </div>
           <div className="flex p-5">
-            <div className="hover:cursor-pointer mr-10" onClick={handleLike}>
-              <LikeButton isLiked={isLiked} />
+            <div
+              className="hover:cursor-pointer mr-10"
+              onClick={() => handleLike(index)}
+            >
+              <LikeButton isLiked={likes[index]} />
             </div>
-            <div className="hover:cursor-pointer mr-10" onClick={handleSave}>
-              <BookmarkButton isSaved={isSaved} />
+            <div
+              className="hover:cursor-pointer mr-10"
+              onClick={() => handleSave(index)}
+            >
+              <BookmarkButton isSaved={saved[index]} />
             </div>
             <div>
               <MoreButton />
