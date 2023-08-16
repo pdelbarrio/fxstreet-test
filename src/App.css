@@ -2,6 +2,9 @@
   margin: 0 auto;
   font-family: Roboto;
 }
+.fixed-width-div {
+  width: 80px;
+}
 /*
 html {
   box-sizing: border-box;

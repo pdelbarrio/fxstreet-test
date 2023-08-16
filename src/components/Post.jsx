@@ -1,6 +1,6 @@
 import { FontAwesomeIcon } from "@fortawesome/react-fontawesome";
 import { formatPublicationTime } from "../utils/utils";
-import { ClockIcon, FileSearchIcon } from "./Icons";
+import { ClockIcon, FileSearchIcon, HideIcon, OptionsIcon } from "./Icons";
 import { faCaretRight } from "@fortawesome/free-solid-svg-icons";
 import parse, { domToReact } from "html-react-parser";
 import { BookmarkButton, LikeButton, MoreButton } from "./Buttons";
@@ -10,6 +10,11 @@ import { useState } from "react";
 export default function Post({ posts }) {
   const [likes, setLikes] = useState(posts.map(() => false));
   const [saved, setSaved] = useState(posts.map(() => false));
+  const [openDropdownIndex, setOpenDropdownIndex] = useState(null);
+
+  const handleDropdown = (postId) => {
+    setOpenDropdownIndex(openDropdownIndex === postId ? null : postId);
+  };
 
   const CustomLink = ({ children, ...props }) => (
     <a className="font-bold text-fx-orange" {...props}>
@@ -128,21 +133,44 @@ export default function Post({ posts }) {
               <img src={post.imageUrl} className="mt-4" alt={post.title} />
             )}
           </div>
-          <div className="flex p-5">
-            <div
-              className="hover:cursor-pointer mr-10"
-              onClick={() => handleLike(index)}
-            >
-              <LikeButton isLiked={likes[index]} />
+          <div className="flex items-center p-4">
+            <div className="fixed-width-div mr-10 ml-2">
+              <div
+                className="hover:cursor-pointer"
+                onClick={() => handleLike(index)}
+              >
+                <LikeButton isLiked={likes[index]} />
+              </div>
             </div>
-            <div
-              className="hover:cursor-pointer mr-10"
-              onClick={() => handleSave(index)}
-            >
-              <BookmarkButton isSaved={saved[index]} />
+            <div className="fixed-width-div mr-10">
+              <div
+                className="hover:cursor-pointer"
+                onClick={() => handleSave(index)}
+              >
+                <BookmarkButton isSaved={saved[index]} />
+              </div>
             </div>
-            <div>
-              <MoreButton />
+            <div className="mr-10">
+              <div
+                className="hover:bg-fx-gray p-2 cursor-pointer"
+                onClick={() => handleDropdown(index)}
+              >
+                <MoreButton />
+              </div>
+              {openDropdownIndex === index && (
+                <div className="absolute ml-[0px] mt-[5px] bg-white border border-gray-300 shadow-lg">
+                  <div className="flex hover:bg-fx-gray pt-3 px-2 cursor-pointer">
+                    <HideIcon />
+                    <span className="text-fx-text-post ml-3 mb-2">Hide</span>
+                  </div>
+                  <div className="flex hover:bg-fx-gray pb-3 px-2 cursor-pointer">
+                    <OptionsIcon />
+                    <span className="text-fx-text-post ml-3">
+                      Improve my feed
+                    </span>
+                  </div>
+                </div>
+              )}
             </div>
           </div>
         </div>
