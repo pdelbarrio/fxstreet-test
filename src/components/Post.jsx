@@ -78,6 +78,32 @@ export default function Post({ posts }) {
             </div>
           </div>
           {/* Header post desktop */}
+          <div className="p-6 border border-t-0 border-l-0 border-r-0 border-b-1 border-fx-gray md:block">
+            <div className="flex">
+              <img
+                src={post.author.imageUrl}
+                alt=""
+                className="w-[50px] h-[50px] rounded-full mr-5"
+              />
+
+              <div>
+                <div className="flex">
+                  <p className="font-semibold text-fx-gray-post mr-2">
+                    {post.author.name}
+                  </p>
+                  <p className="font-semibold text-fx-gray-post">|</p>
+                  <p className="font-semibold text-fx-gray-post ml-2">
+                    {post.author.companyName}
+                  </p>
+                </div>
+                <div>
+                  <p className="font-semibold  text-[22px] text-fx-text-post">
+                    {post.title}
+                  </p>
+                </div>
+              </div>
+            </div>
+          </div>
           <div className="p-4">
             <div>{parse(post.content, { replace: replaceFunction })}</div>
             {post.imageUrl && <img src={post.imageUrl} alt={post.title} />}
