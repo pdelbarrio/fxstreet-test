@@ -49,7 +49,7 @@ export default function Post({ posts }) {
       {posts.map((post, index) => (
         <div
           key={post.id}
-          className="bg-fx-white rounded-lg border-fx-gray-dot border-2 mb-4"
+          className="bg-fx-white rounded-lg border-fx-gray-dot border-2 mb-4 mr-2"
         >
           <div className="flex justify-between bg-fx-gray p-4">
             <div className="flex flex-col md:flex-row">

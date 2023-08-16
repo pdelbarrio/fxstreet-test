@@ -53,13 +53,13 @@ function MainContainer() {
             <PopularButton isClicked={isPopularClicked} />
           </div>
         </div>
-        <div className="hidden md:block space-x-4">
+        <div className="hidden md:block space-x-4 mr-2">
           <div className="flex mr-2">
             <div>Show:</div>
             <AllButton />
           </div>
         </div>
-        <div className="md:hidden">
+        <div className="mr-2 md:hidden">
           <FilterIcon />
         </div>
       </div>
