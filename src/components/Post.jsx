@@ -39,7 +39,23 @@ export default function Post({ posts }) {
               </p>
             </div>
           </div>
-          <p>{post.title}</p>
+          <div>
+            <p>{post.author.name}</p>
+            <p>{post.author.companyName}</p>
+          </div>
+          <div>
+            <img src={post.author.imageUrl} alt="" />
+            <p>{post.title}</p>
+          </div>
+          <div>
+            <div>{post.content}</div>
+            <img src={post.imageUrl} alt={post.title} />
+          </div>
+          <div>
+            <div>Like</div>
+            <div>Save</div>
+            <div>· · ·</div>
+          </div>
         </div>
       ))}
     </div>
