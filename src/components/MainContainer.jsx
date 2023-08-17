@@ -59,7 +59,7 @@ function MainContainer() {
             <AllButton />
           </div>
         </div>
-        <div className="mr-2 md:hidden">
+        <div className="mr-4 md:hidden">
           <FilterIcon />
         </div>
       </div>
