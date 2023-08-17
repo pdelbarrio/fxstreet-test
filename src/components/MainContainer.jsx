@@ -33,7 +33,7 @@ function MainContainer() {
   });
 
   return (
-    <main className="p-2 flex-grow flex flex-col min-h-screen justify-start mr-2">
+    <main className="flex-grow flex flex-col min-h-screen justify-start mr-2 pr-4 py-2 md:pr-0">
       <div className="flex justify-between">
         <div className="flex space-x-4">
           <div
@@ -63,7 +63,7 @@ function MainContainer() {
           <FilterIcon />
         </div>
       </div>
-      <div className="py-4">
+      <div className="py-4 mr-2 md:mr-0">
         <Post posts={filteredPosts} />
       </div>
     </main>
