@@ -17,7 +17,12 @@ export default function Post({ posts }) {
   };
 
   const CustomLink = ({ children, ...props }) => (
-    <a className="font-bold text-fx-orange" {...props}>
+    <a
+      className="font-bold text-fx-orange"
+      target="_blank"
+      rel="noopener noreferrer"
+      {...props}
+    >
       {children}
     </a>
   );
