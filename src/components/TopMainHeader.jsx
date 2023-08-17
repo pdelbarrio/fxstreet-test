@@ -14,7 +14,7 @@ export default function TopMainHeader() {
     setIsPopularClicked,
   } = useContext(FilterContext);
 
-  const handleDropdown = () => {
+  const toggleDropdown = () => {
     setDropdown(!dropdown);
   };
 
@@ -42,7 +42,7 @@ export default function TopMainHeader() {
         <div className="hidden md:block">Show:</div>
         <div
           className="hover:bg-fx-gray cursor-pointer"
-          onClick={() => handleDropdown()}
+          onClick={() => toggleDropdown()}
         >
           <div className="hidden md:block space-x-4 mr-2">
             <div className="flex mr-2">
