@@ -7,19 +7,24 @@ function MainContainer() {
   const [isLatestClicked, setIsLatestClicked] = useState(true);
   const [isPopularClicked, setIsPopularClicked] = useState(false);
   const [posts, setPosts] = useState([]);
+  const [loading, setLoading] = useState(false);
 
   const APIurl = "https://run.mocky.io/v3/25c6bdb6-6377-41f9-907d-c6549ce9e4f7";
 
   useEffect(() => {
     async function fetchPosts() {
       try {
+        setLoading(true);
         const response = await fetch(APIurl);
         const data = await response.json();
         setPosts(data);
       } catch (error) {
         console.error("Error fetching data:", error);
+      } finally {
+        setLoading(false);
       }
     }
+
     fetchPosts();
   }, []);
 
@@ -64,7 +69,7 @@ function MainContainer() {
         </div>
       </div>
       <div className="py-4 mr-2 md:mr-0">
-        <Post posts={filteredPosts} />
+        <Post posts={filteredPosts} isLoading={loading} />
       </div>
     </main>
   );
