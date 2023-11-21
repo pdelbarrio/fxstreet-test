@@ -9,7 +9,7 @@ function MainContainer() {
 
   const { isLatestClicked, isPopularClicked } = useContext(FilterContext);
 
-  const APIurl = "https://run.mocky.io/v3/25c6bdb6-6377-41f9-907d-c6549ce9e4f7";
+  const APIurl = "https://run.mocky.io/v3/1eb48a56-fb03-4536-a1a3-13f583430643";
 
   useEffect(() => {
     async function fetchPosts() {
@@ -17,6 +17,7 @@ function MainContainer() {
         setLoading(true);
         const response = await fetch(APIurl);
         const data = await response.json();
+
         setPosts(data);
       } catch (error) {
         console.error("Error fetching data:", error);
